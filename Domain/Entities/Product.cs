@@ -11,9 +11,9 @@ namespace Domain.Entities
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
-        public string CodErp { get; private set; }
+        public string Coderp { get; private set; }
         public decimal Price { get; private set; }
-        public ICollection<Purchase> purchases { get; private set; }
+        public ICollection<Purchase> Purchases { get; private set; }
 
         public Product(string name, string codErp, decimal price) 
         {
@@ -34,7 +34,7 @@ namespace Domain.Entities
             DomainValidationException.When((price < 0), "Preço do Produto precisa ser informado");
 
             Name = name;
-            CodErp = codErp;
+            Coderp = codErp;
             Price = price;
         }
 
